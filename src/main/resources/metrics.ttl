@@ -1,0 +1,249 @@
+@prefix metrics: <http://dynamicdashboard.ilabt.imec.be/broker/ontologies/metrics#> .
+@prefix dashb:   <http://dynamicdashboard.ilabt.imec.be/broker/ontologies/dashboard#> .
+@prefix om:      <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Basic types
+metrics:json a dashb:Metric ;
+    dashb:datatype xsd:string .
+
+metrics:number a dashb:Metric ;
+    dashb:datatype xsd:double .
+
+metrics:bool a dashb:Metric ;
+    dashb:datatype xsd:boolean .
+
+metrics:string a dashb:Metric ;
+    dashb:datatype xsd:string .
+
+
+metrics:quantity a dashb:Metric ;
+    a om:Quantity ;
+    dashb:datatype xsd:double .
+
+metrics:celsiusTemperature a dashb:Metric ;
+    a om:CelsiusTemperature ;
+    om:hasUnit om:degreeCelsius ;
+    dashb:datatype xsd:double .
+
+metrics:relativeHumidity a dashb:Metric ;
+    a om:RelativeHumidity ;
+    om:hasUnit om:percent ;
+    dashb:datatype xsd:double .
+
+metrics:airParticlesPpmConcentration a dashb:Metric;
+    om:hasUnit dashb:partsPerMillion;
+    dashb:datatype xsd:double .
+
+metrics:metricSpeed a dashb:Metric ;
+    a om:Speed ;
+    om:hasUnit om:metrePerSecond-Time ;
+    dashb:datatype xsd:double .
+
+metrics:acceleration a dashb:Metric ;
+    a om:Acceleration;
+    dashb:datatype xsd:double .
+
+metrics:linearAcceleration a dashb:Metric ;
+    a om:Acceleration;
+    om:hasUnit om:metrePerSecond-TimeSquared ;
+    dashb:datatype xsd:double .
+
+metrics:linearAccelerationX a dashb:Metric;
+    a om:Acceleration;
+    om:hasUnit om:metrePerSecond-TimeSquared ;
+    dashb:datatype xsd:double .
+
+metrics:linearAccelerationY a dashb:Metric ;
+    a om:Acceleration ;
+    om:hasUnit om:metrePerSecond-TimeSquared ;
+    dashb:datatype xsd:double .
+
+metrics:linearAccelerationZ a dashb:Metric ;
+    a om:Acceleration ;
+    om:hasUnit om:metrePerSecond-TimeSquared ;
+    dashb:datatype xsd:double .
+
+metrics:angularAcceleration a dashb:Metric ;
+    a om:Acceleration ;
+    om:hasUnit om:radianPerSecond-TimeSquared ;
+    dashb:category dashb:1D ;
+    dashb:datatype xsd:double .
+
+metrics:yaw a dashb:Metric ;
+    a om:Acceleration ;
+    om:hasUnit om:metrePerSecond-TimeSquared ;
+    dashb:datatype xsd:double .
+
+metrics:pitch a dashb:Metric ;
+    a om:Acceleration ;
+    om:hasUnit om:metrePerSecond-TimeSquared ;
+    dashb:datatype xsd:double .
+
+metrics:roll a dashb:Metric ;
+    a om:Acceleration ;
+    om:hasUnit om:metrePerSecond-TimeSquared ;
+    dashb:datatype xsd:double .
+
+metrics:degreesAngle a dashb:Metric ;
+    a om:Angle ;
+    om:hasUnit om:degree ;
+    dashb:datatype xsd:double .
+
+metrics:cubicAirFlow a dashb:Metric ;
+    a om:VolumetricFlowRate ;
+    om:hasUnit om:cubicMetrePerSecond-Time ;
+    dashb:datatype xsd:double .
+
+metrics:latitude a dashb:Metric ;
+    a om:EclipticLatitude ;
+    dashb:datatype xsd:double .
+
+metrics:longitude a dashb:Metric ;
+    a om:EclipticLongitude ;
+    dashb:datatype xsd:double .
+
+metrics:rxPower a dashb:Metric ;
+    dashb:datatype xsd:double .
+
+metrics:txPower a dashb:Metric ;
+    dashb:datatype xsd:double .
+
+metrics:voltage a dashb:Metric ;
+    a om:ElectricPotential ;
+    om:hasUnit om:volt ;
+    dashb:datatype xsd:double .
+
+metrics:fractionPercentage a dashb:Metric ;
+    dashb:datatype xsd:double .
+
+metrics:systemState a dashb:Metric ;
+    dashb:datatype xsd:string .
+
+metrics:rotationSpeed a dashb:Metric ;
+    a om:AngularSpeed ;
+    om:hasUnit om:metrePerSecond-TimeSquared ;
+    dashb:datatype xsd:double .
+
+metrics:latitudes a dashb:Metric ;
+    dashb:datatype xsd:double .
+
+metrics:dailyRecord a dashb:Metric .
+
+metrics:headache a dashb:Metric .
+
+metrics:stress a dashb:Metric .
+
+metrics:medicine a dashb:Metric .
+
+metrics:activity a dashb:Metric .
+
+metrics:oxygenSaturation a dashb:Metric;
+    om:hasUnit om:percent ;
+    dashb:datatype xsd:double .
+
+metrics:heartRate a dashb:Metric;
+    a om:Frequency ;
+    om:hasUnit om:hertz;
+    dashb:datatype xsd:double .
+
+metrics:scale a dashb:Metric;
+    a om:BodyMass ;
+    om:hasUnit om:kilogram;
+    dashb:datatype xsd:double .
+
+metrics:diastolicBloodPressure a dashb:Metric;
+    a om:Pressure ;
+    om:hasUnit om:millimetreOfMercury ;
+    dashb:datatype xsd:double .
+
+metrics:systolicBloodPressure a dashb:Metric;
+    a om:Pressure ;
+    om:hasUnit om:millimetreOfMercury ;
+    dashb:datatype xsd:double .
+
+metrics:glucoseLevel a dashb:Metric;
+    dashb:datatype xsd:double .
+
+metrics:loudness a dashb:Metric ;
+    dashb:datatype xsd:double .
+
+metrics:atmosphericPressure a dashb:Metric ;
+    a om:Pressure ;
+    dashb:datatype xsd:double .
+
+metrics:lightLevel a dashb:Metric ;
+    dashb:datatype xsd:double .
+
+metrics:numberOfPeopleDetected a dashb:Metric ;
+    dashb:datatype xsd:nonNegativeInteger .
+
+metrics:motionDetected a dashb:Metric ;
+    dashb:datatype xsd:boolean .
+
+metrics:buttonPressed a dashb:Metric ;
+    dashb:datatype xsd:boolean .
+
+metrics:lightSwitch a dashb:Metric ;
+    dashb:datatype xsd:boolean .
+
+metrics:relay a dashb:Metric ;
+    dashb:datatype xsd:boolean .
+
+metrics:windSpeed a metrics:metricSpeed ;
+    dashb:datatype xsd:double .
+
+metrics:rainRate a dashb:Metric ;
+    dashb:datatype xsd:double .
+
+metrics:power a dashb:Metric ;
+    a om:Power ;
+    dashb:datatype xsd:double .
+
+metrics:powerConsumption a dashb:Metric ;
+    a om:Power ;
+    dashb:datatype xsd:double .
+
+metrics:dimmer a dashb:Metric ;
+    dashb:datatype xsd:double .
+
+metrics:waterRunning a dashb:Metric ;
+    dashb:datatype xsd:double .
+
+metrics:blinds a dashb:Metric ;
+    dashb:datatype xsd:boolean  .
+
+metrics:glucoseLevel a dashb:Metric ;
+    a om:AmountOfSubstanceFraction ;
+    dashb:datatype xsd:double .
+
+metrics:accelerationX a dashb:Metric ;
+    a om:Acceleration;
+    dashb:datatype xsd:double .
+
+metrics:accelerationY a dashb:Metric ;
+    a om:Acceleration;
+    dashb:datatype xsd:double .
+
+metrics:accelerationZ a dashb:Metric ;
+    a om:Acceleration;
+    dashb:datatype xsd:double .
+
+metrics:rotationX a dashb:Metric ;
+    a om:Angle ;
+    dashb:datatype xsd:double .
+
+metrics:rotationY a dashb:Metric ;
+    a om:Angle ;
+    dashb:datatype xsd:double .
+
+metrics:rotationZ a dashb:Metric ;
+    a om:Angle ;
+    dashb:datatype xsd:double .
+
+metrics:audioFileLink a dashb:Metric ;
+    dashb:datatype xsd:string .
+
+metrics:htmlFileLink a dashb:Metric ;
+    dashb:datatype xsd:string .

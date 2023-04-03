@@ -1,0 +1,18 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ssn-ext: <http://dynamicdashboard.ilabt.imec.be/broker/ontologies/ssn-extension/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix metrics: <http://dynamicdashboard.ilabt.imec.be/broker/ontologies/metrics#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix dashb: <http://dynamicdashboard.ilabt.imec.be/broker/ontologies/dashboard#> .
+
+ <http://localhost:8443/things/aggregation> a sosa:Sensor ;
+   rdfs:label "Aggregation" ;
+   rdfs:comment "Simulation of an aggregation" ;
+   sosa:observes <http://localhost:8443/things/aggregation/properties/average> .
+
+ <http://localhost:8443/things/aggregation/properties/average> a sosa:ObservableProperty ;
+   rdfs:label "Average" ;
+   rdfs:comment "Average aggregation" ;
+   dashb:produces metrics:number .
