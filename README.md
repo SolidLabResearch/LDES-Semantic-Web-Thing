@@ -26,7 +26,7 @@ The visualisation is able to:
 * Example usage: `comunica-sparql-link-traversal-solid-http -p 8081 --idp void http://localhost:3000/aggregation_pod/data/ --lenient`
 * The example runs the Comunica engine locally on port 8081, connects without user credentials to the Solid Pod containing the Aggregator data in a 
 SolidEventSourcing (https://github.com/woutslabbinck/SolidEventSourcing/) compatible manner. 
-3. Java version: >= openjdk 16.0.1 2021-04-20 
+3. Java version: (currently running on) >= openjdk 16.0.1 2021-04-20 (it has been compiled against: Oracle JDK 16.0.2).
 
 ### Binary utilisation
 Clone the GIT repository: https://github.com/SolidLabResearch/LDES-Semantic-Web-Thing.git
