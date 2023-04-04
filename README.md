@@ -34,3 +34,13 @@ The binary can be found in the bin-folder, immediately below root.
 Running this binary can be accomplished using the command: `java -jar ldeswebthing-v0.0.1.jar`
 
 ### Compiling from source
+Apache Maven is used as software management tool for this project, more specifically, in our situation Apache Maven 3.6.3 was used. 
+1. Executing `mvn clean install` in the root folder of the project should start the compilation process.
+
+### Configuration Properties
+In the folder `src/main/resources`, a number of properties files can be found to finetune your own configuration.
+1. `app.properties`: This file contains some general properties.
+* `DATASET_ID`: A unique dataset identifier
+* `LDES_ENDPOINT`: The location of the LDES Solid Pod to be used.
+* `ROOT_URL`: Specification of the Root URL for the semantic observations.
+2. 
