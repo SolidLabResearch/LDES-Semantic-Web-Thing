@@ -8,3 +8,10 @@ Aggregations and data summaries allow to provide succinct view on larger dataset
 
 ## Solution
 The generic visualisation components connects to the aggregator service and allows to visualise the results in the semantic dashboard. The latter allows to specify in a generic manner how to present the visualisation itself. To enable this, a mapping of the internal data of the aggregator to the data format used by the semantic dashboard is necessary (which is build around webThing).
+
+## Functionality
+The visualisation is able to:
+
+1. Connect with the aggregation service (as defined in Challenge #84)
+2. Map the internal results of the aggregator to the format used by the semantic dashboard (which uses webThing)
+3. Allow specifying how to visualise the results in the semantic dashboard
