@@ -23,8 +23,8 @@ The visualisation is able to:
 
 1. A running Aggregator service, defined by Challenge #84: https://github.com/argahsuknesib/solid-stream-aggregator
 2. The Comunica SPARQL Link Traveral Engine: https://github.com/comunica/comunica-feature-link-traversal/tree/master/engines/query-sparql-link-traversal-solid#usage-as-a-sparql-endpoint. 
-2.1. Example usage: `comunica-sparql-link-traversal-solid-http -p 8081 --idp void http://localhost:3000/aggregation_pod/data/ --lenient`
-2.2. The example runs the Comunica engine locally on port 8081, connects without user credentials to the Solid Pod containing the Aggregator data in a 
+* Example usage: `comunica-sparql-link-traversal-solid-http -p 8081 --idp void http://localhost:3000/aggregation_pod/data/ --lenient`
+* The example runs the Comunica engine locally on port 8081, connects without user credentials to the Solid Pod containing the Aggregator data in a 
 SolidEventSourcing (https://github.com/woutslabbinck/SolidEventSourcing/) compatible manner. 
 3. Java version: >= openjdk 16.0.1 2021-04-20 
 
