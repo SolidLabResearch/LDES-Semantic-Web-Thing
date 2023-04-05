@@ -15,6 +15,10 @@ Below a screenshot of the sample deployment.
 
 ## Screencast
 
+Below a screencast of the sample deployment.
+
+https://user-images.githubusercontent.com/19285142/230082536-e87f4466-2053-4f13-9fe3-9ed781d9360f.mp4
+
 ## Functionality
 The visualisation is able to:
 
