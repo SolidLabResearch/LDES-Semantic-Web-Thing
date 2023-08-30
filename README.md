@@ -54,5 +54,8 @@ In the folder `src/main/resources`, a number of properties files can be found to
 2. `semantic-data.ttl`: This file specifies (a.o. to the Dynamic Dashboard) what data is exposed, and which semantics are used. More information can be found in the documentation of that platform. (http://dx.doi.org/10.3390/s20041152).
 3. `metrics.ttl`: Enlists all possible semantic annotations that can be used to inform the Dynamic Dashboard about the characteristics of the data provided by the SWT.
 
+### Running the service
+1. Executing `clean package exec:java` in the root folder of the project should start Semantic Web Thing for LDES service.
+
 ## Support
 Stijn.Verstichel@UGent.be
