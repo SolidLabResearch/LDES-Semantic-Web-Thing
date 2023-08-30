@@ -51,6 +51,10 @@ In the folder `src/main/resources`, a number of properties files can be found to
 * `DATASET_ID`: A unique dataset identifier
 * `LDES_ENDPOINT`: The location of the LDES Solid Pod to be used.
 * `ROOT_URL`: Specification of the Root URL for the semantic observations.
+* `AUTH_ID=`: In case authentication is enabled.
+* `AUTH_SECRET=`: In case authentication is enabled.
+* `EVENT_ID=event::json`: Meta information needed for the LDES base service on which this builds further.
+* `ACTION_ID=action::json`: Meta information needed for the LDES base service on which this builds further.
 2. `semantic-data.ttl`: This file specifies (a.o. to the Dynamic Dashboard) what data is exposed, and which semantics are used. More information can be found in the documentation of that platform. (http://dx.doi.org/10.3390/s20041152).
 3. `metrics.ttl`: Enlists all possible semantic annotations that can be used to inform the Dynamic Dashboard about the characteristics of the data provided by the SWT.
 
