@@ -45,6 +45,34 @@ Running this binary can be accomplished using the command: `java -jar ldeswebthi
 Apache Maven is used as software management tool for this project, more specifically, in our situation Apache Maven 3.6.3 was used. 
 1. Executing `mvn clean install` in the root folder of the project should start the compilation process.
 
+In the situation your maven installation has not yet gained access to the IDLab repository, you will need to adapt your maven configuration. 
+2. Request a access-token for the IDLab GitLab Maven Repository at `gitlab.ilabt.imec.be` -> User Settings -> Access Tokens. This token should at least have API scope.
+3. Complete your maven settings, traditionally found in `~/.m2/settings.xml`, with
+
+````
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <!-- https://docs.gitlab.com/ee/user/packages/maven_repository/#authenticating-with-a-personal-access-token -->
+    <!-- https://gitlab.ilabt.imec.be/profile/personal_access_tokens -->
+    <servers>
+        <server>
+            <id>gitlab-maven</id>
+            <configuration>
+                <httpHeaders>
+                    <property>
+                        <name>Private-Token</name>
+                        <value>--Personal GitLab Token--</value>
+                    </property>
+                </httpHeaders>
+            </configuration>
+        </server>
+    </servers>
+</settings>
+````
+
 ### Configuration Properties
 In the folder `src/main/resources`, a number of properties files can be found to finetune your own configuration.
 1. `app.properties`: This file contains some general properties.
